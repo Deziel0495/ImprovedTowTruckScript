@@ -19,6 +19,5 @@ If another player is next to you when the command is entered the vehicle may not
 ## Possible Future Features
 - Restricted vehicles. (Keep people from towing large vehicles such as a bus or plane.)
 - Restrict usage distance. (Towed vehicle and truck must be near each other.)
-- Implement whitelist. (Restrict script to certain ped models or users by Steam ID/License.)
 
 #### Join my Discord: http://discord.me/deziel0495
