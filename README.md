@@ -1,4 +1,4 @@
-# Tow-Script
+# TowScript
 Modified version of Asser90's tow script.
 
 ## How it works:
