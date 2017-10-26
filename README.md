@@ -14,7 +14,7 @@ A modified version of Asser90's tow script with multiple fixes and improvements.
 - Once at your destination, get out of the truck and type `/tow` in chat again to detach the vehicle from the flatbed.
 
 ## Known Issues
-If another player is next to you when the command is entered the vehicle may not attach/detach. Ask them to step away. This issue was present in the original script and I'm unaware of the cause.
+If another player is next to you when the command is entered the vehicle may not attach/detach. Ask them to step away. This issue was present in the original script and is being worked on.
 
 ## Possible Future Features
 - Restricted vehicles. (Keep people from towing large vehicles such as a bus or plane.)
