@@ -43,8 +43,6 @@ AddEventHandler('tow', function()
 						AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0, -2.0, 1.0, 0, 0, 0, 1, 1, 0, 1, 0, 1)
 						currentlyTowedVehicle = targetVehicle
 						ShowNotification("Vehicle has been succesfully ~g~ATACHED ~s~to the flatbed.")
-					else
-						ShowNotification("~o~You cannot tow your own truck!")
 					end
 				end
 			end
@@ -64,7 +62,6 @@ function getVehicleInDirection(coordFrom, coordTo)
 	local a, b, c, d, vehicle = GetRaycastResult(rayHandle)
 	return vehicle
 end
-
 
 function ShowNotification(text)
 	SetNotificationTextEntry("STRING")
