@@ -5,7 +5,7 @@ local currentlyTowedVehicle = nil
 RegisterNetEvent('tow')
 AddEventHandler('tow', function()
 	
-	local playerped = GetPlayerPed(-1)
+	local playerped = PlayerPedId()
 	local vehicle = GetVehiclePedIsIn(playerped, true)
 	
 	local towmodel = GetHashKey('flatbed')
@@ -24,9 +24,9 @@ AddEventHandler('tow', function()
 					if vehicle ~= targetVehicle then
 						AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0, -2.0, 1.0, 0, 0, 0, 1, 1, 0, 1, 0, 1)
 						currentlyTowedVehicle = targetVehicle
-						ShowNotification("~h~Vehicle has been successfully ~g~attached ~s~to the flatbed.")
+						ShowNotification("Vehicle has been successfully ~g~ATTACHED ~s~to the flatbed.")
 					else
-						ShowNotification("~h~~o~You cannot tow your own truck!")
+						ShowNotification("~o~You cannot tow your own truck!")
 					end
 				end
 			end
@@ -36,16 +36,17 @@ AddEventHandler('tow', function()
 			SetEntityCoords(currentlyTowedVehicle, vehiclesCoords["x"], vehiclesCoords["y"], vehiclesCoords["z"], 1, 0, 0, 1)
 			SetVehicleOnGroundProperly(currentlyTowedVehicle)
 			currentlyTowedVehicle = nil
-			ShowNotification("~h~Vehicle has been succesfully ~r~detached ~s~from the flatbed.")
+			ShowNotification("Vehicle has been succesfully ~r~DETACHED ~s~from the flatbed.")
 		end
 	end
 end)
 
 function getVehicleInDirection(coordFrom, coordTo)
-	local rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z, 10, GetPlayerPed(-1), 0)
+	local rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z, 10, PlayerPedId(), 0)
 	local a, b, c, d, vehicle = GetRaycastResult(rayHandle)
 	return vehicle
 end
+
 
 function ShowNotification(text)
 	SetNotificationTextEntry("STRING")
