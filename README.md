@@ -1,5 +1,5 @@
 # TowScript
-A modified version of Asser90's tow script I made a few months back and never did release it.
+A modified version of Asser90's tow script with multiple fixes and improvements.
 
 ## Changes
 - Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
