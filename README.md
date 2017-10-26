@@ -1,5 +1,5 @@
 # TowScript
-Modified version of Asser90's tow script.
+Here is a modified version of Asser90's tow script I made a few months back and never released. Fixes attach/detach and no more "jello" vehicles.
 
 ## How it works:
 - Spawn in or find a flatbed truck.
