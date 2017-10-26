@@ -22,5 +22,6 @@ If another player is next to you when the command is entered the vehicle may not
 - Allow towed vehicles to become detached if the truck overturns or explodes.
 - Restrict command to stationary vehicles. (Right now you can tow a vehicle driving by or detach a vehicle from inside the truck, even while it's moving.)
 - Restrict usage distance. (Towed vehicle and truck must be near each other.)
+- Implement whitelist. (Restrict script to certain peds or users.)
 
 #### Join my Discord: http://discord.me/deziel0495
