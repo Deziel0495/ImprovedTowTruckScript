@@ -4,6 +4,8 @@ A modified version of Asser90's tow script with multiple fixes and improvements.
 ## Changes
 - Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
 - No more "jello" vehicles that stretch and warp when being towed.
+- Can no longer detach vehicle while moving or attach vehicles while they are moving.
+ - Vehicles will detach if truck flips.
 
 ## How it works:
 - Spawn or find a flatbed truck and get in it.
@@ -16,7 +18,6 @@ If another player is next to you when the command is entered the vehicle may not
 
 ## Possible Future Features
 - Restricted vehicles. (Keep people from towing large vehicles such as a bus or plane.)
-- Restrict command to stationary vehicles. (Right now you can tow a vehicle driving by or detach a vehicle from inside the truck, even while it's moving.)
 - Restrict usage distance. (Towed vehicle and truck must be near each other.)
 - Implement whitelist. (Restrict script to certain ped models or users by Steam ID/License.)
 
