@@ -2,7 +2,7 @@
 A modified version of Asser90's tow script I made a few months back and never did release it.
 
 ## Changes
-- Fixes attach/detach positions on both truck and ground.
+- Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
 - No more "jello" vehicles that stretch and warp when being towed.
 
 ## How it works:
