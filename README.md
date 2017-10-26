@@ -1,7 +1,7 @@
 # TowScript
 A modified version of Asser90's tow script with multiple fixes and improvements.
 
-## Changes
+## Features
 - Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
 - No more "jello" vehicles that stretch and warp when being towed.
 - Can no longer detach a vehicle while the truck is moving or attach vehicles while they are moving.
@@ -14,12 +14,10 @@ A modified version of Asser90's tow script with multiple fixes and improvements.
 - Once at your destination, get out of the truck and type `/tow` in chat again to detach the vehicle from the flatbed.
 
 ## Known Issues
-If another player is next to you when the command is entered the vehicle may not attach/detach. Ask them to step away.
-<br>
-The cause of this has been identified and is being worked on.
+If another player is next to you when the command is entered the vehicle may not attach/detach. Ask them to step away. The cause of this has been identified and is being worked on.
 
-## Possible Future Features
-- Restricted vehicles. (Keep people from towing large vehicles such as a bus or plane.)
+## Planned Features
+- Restricted vehicles. (Keep people from towing large vehicles such as a helicopter or plane.)
 - Restrict distance. (Vehicle to be towed and truck must be near each other.)
 
 #### Join my Discord: http://discord.me/deziel0495
