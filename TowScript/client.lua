@@ -47,15 +47,6 @@ function getVehicleInDirection(coordFrom, coordTo)
 	return vehicle
 end
 
-Citizen.CreateThread(function()
-	while true do
-		Citizen.Wait(10)
-		if IsEntityUpsidedown(vehicle) and currentlyTowedVehicle ~= nil then
-			DetachEntity(targetVehicle, false, false)
-		end
-	end
-end)
-
 function ShowNotification(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
