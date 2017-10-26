@@ -16,7 +16,6 @@ If another player is next to you when the command is entered the vehicle may not
 
 ## Possible Future Features
 - Restricted vehicles. (Keep people from towing large vehicles such as a bus or plane.)
-- Allow towed vehicles to become detached if the truck overturns or explodes.
 - Restrict command to stationary vehicles. (Right now you can tow a vehicle driving by or detach a vehicle from inside the truck, even while it's moving.)
 - Restrict usage distance. (Towed vehicle and truck must be near each other.)
 - Implement whitelist. (Restrict script to certain ped models or users by Steam ID/License.)
