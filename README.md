@@ -4,8 +4,8 @@ A modified version of Asser90's tow script with multiple fixes and improvements.
 ## Changes
 - Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
 - No more "jello" vehicles that stretch and warp when being towed.
-- Can no longer detach vehicle while moving or attach vehicles while they are moving.
- - Vehicles will detach if truck flips.
+- Can no longer detach a vehicle while the truck is moving or attach vehicles while they are moving.
+ - Vehicles will detach if the truck flips over.
 
 ## How it works:
 - Spawn or find a flatbed truck and get in it.
