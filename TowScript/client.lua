@@ -32,6 +32,7 @@ AddEventHandler('tow', function()
 				if IsEntityUpsidedown(GetVehiclePedIsIn(PlayerPedId(), true)) and isVehicleTow or roll > 70.0 or roll < -70.0 then
 					DetachEntity(currentlyTowedVehicle, false, false)
 					currentlyTowedVehicle = nil
+					ShowNotification("~o~~h~Tow Service:~n~~s~Looks like the cables holding on the vehicle have broke!")
 				end
 			end
 		end)
@@ -42,7 +43,9 @@ AddEventHandler('tow', function()
 					if vehicle ~= targetVehicle and IsVehicleStopped(vehicle) then
 						AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0, -2.5, 1.0, 0, 0, 0, 1, 1, 0, 1, 0, 1)
 						currentlyTowedVehicle = targetVehicle
-						ShowNotification("Vehicle has been succesfully ~g~ATTACHED ~s~to the flatbed.")
+						ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been loaded onto the flatbed.")
+						else
+						ShowNotification("~o~~h~Tow Service:~n~~s~There is currently no vehicle on the flatbed.")
 					end
 				end
 			end
@@ -52,7 +55,7 @@ AddEventHandler('tow', function()
 			SetEntityCoords(currentlyTowedVehicle, vehiclesCoords["x"], vehiclesCoords["y"], vehiclesCoords["z"], 1, 0, 0, 1)
 			SetVehicleOnGroundProperly(currentlyTowedVehicle)
 			currentlyTowedVehicle = nil
-			ShowNotification("Vehicle has been succesfully ~r~DETACHED ~s~from the flatbed.")
+			ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been unloaded from the flatbed.")
 		end
 	end
 end)
