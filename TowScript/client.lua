@@ -4,7 +4,7 @@ local currentlyTowedVehicle = nil
 
 RegisterCommand("tow", function()
 	TriggerEvent("tow")
-end,restricted)
+end,false)
 
 RegisterNetEvent('tow')
 AddEventHandler('tow', function()
