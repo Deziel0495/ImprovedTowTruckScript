@@ -1,7 +1,7 @@
 # TowScript
 A modified version of Asser90's tow script with multiple fixes and improvements.
 
-[![https://gyazo.com/0bca4baa009ac5021eb5a9fda404fd34](https://i.gyazo.com/0bca4baa009ac5021eb5a9fda404fd34.gif)](https://gyazo.com/0bca4baa009ac5021eb5a9fda404fd34)
+<a href="https://gyazo.com/0bca4baa009ac5021eb5a9fda404fd34"><img src="https://i.gyazo.com/0bca4baa009ac5021eb5a9fda404fd34.gif" alt="https://gyazo.com/0bca4baa009ac5021eb5a9fda404fd34" width="800"/></a>
 
 ## Important Note:
 Script is designed to work with a modified flatbed, which I have included. To use this script with other flatbed models the placement values will have to be adjusted. ALL credit for the Mule flatbed goes to TheF3nt0n. https://www.gta5-mods.com/vehicles/maibatsu-mule-recovery-add-on.
