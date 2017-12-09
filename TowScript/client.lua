@@ -6,23 +6,21 @@ RegisterCommand("tow", function()
 	TriggerEvent("tow")
 end,restricted)
 
-
 RegisterNetEvent('tow')
 AddEventHandler('tow', function()
 	
 	local playerped = PlayerPedId()
 	local vehicle = GetVehiclePedIsIn(playerped, true)
 	
-	local towmodel = GetHashKey('flatbed')
+	local towmodel = GetHashKey('mule5')
 	local isVehicleTow = IsVehicleModel(vehicle, towmodel)
-			
+
 	if isVehicleTow then
-	
+
 		local coordA = GetEntityCoords(playerped, 1)
 		local coordB = GetOffsetFromEntityInWorldCoords(playerped, 0.0, 5.0, 0.0)
 		local targetVehicle = getVehicleInDirection(coordA, coordB)
 
-		
 		Citizen.CreateThread(function()
 			while true do
 				Citizen.Wait(0)
@@ -41,7 +39,7 @@ AddEventHandler('tow', function()
 			if targetVehicle ~= 0 then
 				if not IsPedInAnyVehicle(playerped, true) then
 					if vehicle ~= targetVehicle and IsVehicleStopped(vehicle) then
-						AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0, -2.5, 1.0, 0, 0, 0, 1, 1, 0, 1, 0, 1)
+						AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0, -1.5, 0.5, 0, 0, 0, 1, 1, 0, 1, 0, 1)
 						currentlyTowedVehicle = targetVehicle
 						ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been loaded onto the flatbed.")
 						else
@@ -51,7 +49,7 @@ AddEventHandler('tow', function()
 			end
 		elseif IsVehicleStopped(vehicle) then
 		DetachEntity(currentlyTowedVehicle, false, false)
-		local vehiclesCoords = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, -10.0, 0.0)
+		local vehiclesCoords = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, -8.0, 0.0)
 			SetEntityCoords(currentlyTowedVehicle, vehiclesCoords["x"], vehiclesCoords["y"], vehiclesCoords["z"], 1, 0, 0, 1)
 			SetVehicleOnGroundProperly(currentlyTowedVehicle)
 			currentlyTowedVehicle = nil
