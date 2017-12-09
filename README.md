@@ -2,7 +2,7 @@
 A modified version of Asser90's tow script with multiple fixes and improvements.
 
 ## Important Note:
-Script is designed to work with a modified flatbed, which I have included. To use this script with other flatbed models the placement values will have to be adjusted. ALL credit for the Mule flatbed goes to TheF3nt0n. https://www.gta5-mods.com/vehicles/maibatsu-mule-recovery-add-on
+Script is designed to work with a modified flatbed, which I have included. To use this script with other flatbed models the placement values will have to be adjusted. ALL credit for the Mule flatbed goes to TheF3nt0n. https://www.gta5-mods.com/vehicles/maibatsu-mule-recovery-add-on.
 
 ## Features:
 - Fixes attach/detach positions on both truck and ground. No more upside down cars when detaching!
@@ -11,7 +11,7 @@ Script is designed to work with a modified flatbed, which I have included. To us
  - Vehicles will detach if the truck flips over.
 
 ## How it works:
-- Spawn or find a flatbed truck and get in it.
+- Using a trainer spawn `mule5` and get in it.
 - When you find a vehicle to tow, get out and walk up to the vehicle.
 - While facing the vehicle type `/tow` in chat to attach the vehicle to the flatbed.
 - Once at your destination, get out of the truck and type `/tow` in chat again to detach the vehicle from the flatbed.
