@@ -12,7 +12,7 @@ AddEventHandler('tow', function()
 	local playerped = PlayerPedId()
 	local vehicle = GetVehiclePedIsIn(playerped, true)
 	
-	local towmodel = GetHashKey('mule5')
+	local towmodel = GetHashKey('flatbed2')
 	local isVehicleTow = IsVehicleModel(vehicle, towmodel)
 
 	if isVehicleTow then
