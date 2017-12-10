@@ -11,7 +11,7 @@ Script is designed to work with a modified flatbed, which I have included. To us
  - Vehicles will detach if the truck flips over.
 
 ## How it works:
-- Using a trainer spawn `mule5` and get in it.
+- Using a trainer spawn `flatbed2` and get in it.
 - When you find a vehicle to tow, get out and walk up to the vehicle.
 - While facing the vehicle type `/tow` in chat to attach the vehicle to the flatbed.
 - Once at your destination, get out of the truck and type `/tow` in chat again to detach the vehicle from the flatbed.
