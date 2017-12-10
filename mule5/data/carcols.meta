@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <CVehicleModelInfoVarGlobal>
-	<!-- LIGHT SETTINGS -->
-	<Lights>
+<!-- LIGHT SETTINGS -->
+<Lights>
   </Lights>
   <!-- SIREN SETTINGS -->
   <Sirens>
-	<Item>
+<Item>
       <id value="159"/>
       <name>orange_globes</name>
       <timeMultiplier value="0.50000000"/>
