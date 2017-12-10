@@ -9,8 +9,8 @@
       <id value="159"/>
       <name>orange_globes</name>
       <timeMultiplier value="0.50000000"/>
-      <lightFalloffMax value="100.00000000"/>
-      <lightFalloffExponent value="100.00000000"/>
+      <lightFalloffMax value="50.00000000"/>
+      <lightFalloffExponent value="50.00000000"/>
       <lightInnerConeAngle value="0.00000000"/>
       <lightOuterConeAngle value="50.00000000"/>
       <lightOffset value="0.00000000"/>
@@ -755,6 +755,6 @@
           <castShadows value="false"/>
         </Item>
       </sirens>
-	 </Item>
+    </Item>
    </Sirens>
 </CVehicleModelInfoVarGlobal>
