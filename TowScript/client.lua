@@ -24,7 +24,7 @@ AddEventHandler('tow', function()
 		Citizen.CreateThread(function()
 			while true do
 				Citizen.Wait(0)
-				local towmodel = GetHashKey('flatbed')
+				local towmodel = GetHashKey('flatbed2')
 				local isVehicleTow = IsVehicleModel(vehicle, towmodel)
 				roll = GetEntityRoll(GetVehiclePedIsIn(PlayerPedId(), true))
 				if IsEntityUpsidedown(GetVehiclePedIsIn(PlayerPedId(), true)) and isVehicleTow or roll > 70.0 or roll < -70.0 then
