@@ -6,7 +6,7 @@
 local allowedTowModels = { 
     ['flatbed'] = {x = 0.0, y = -0.85, z = 1.25}, -- default GTA V flatbed
     ['flatbed2'] = {x = 0.0, y = 0.0, z = 0.68}, -- addon flatbed2 (provided with the script)
-    ['flatbed3'] = {x = 0.0, y = -1.2, z = 1.30}, -- addon flatbed3 (download here: https://goo.gl/xnja4H you need to create a resource for it yourself though)
+    ['flatbed3'] = {x = 0.0, y = -1.2, z = 1.30}, -- addon flatbed3 (also provided with the script)
 }
 
 
