@@ -22,6 +22,20 @@ RegisterCommand("tow", function()
 	TriggerEvent("tow")
 end,false)
 
+
+
+function isTargetVehicleATrailer(modelHash)
+    if GetVehicleClassFromName(modelHash) == 11 then
+        return true
+    else
+        return false
+    end
+end
+
+local xoff = 0.0
+local yoff = 0.0
+local zoff = 0.0
+
 function isVehicleATowTruck(vehicle)
     local isValid = false
     for model,posOffset in pairs(allowedTowModels) do
@@ -35,18 +49,6 @@ function isVehicleATowTruck(vehicle)
     end
     return isValid
 end
-
-function isTargetVehicleATrailer(modelHash)
-    if GetVehicleClassFromName(modelHash) == 11 then
-        return true
-    else
-        return false
-    end
-end
-
-local xoff = 0.0
-local yoff = 0.0
-local zoff = 0.0
 
 RegisterNetEvent('tow')
 AddEventHandler('tow', function()
@@ -79,23 +81,31 @@ AddEventHandler('tow', function()
 
 		if currentlyTowedVehicle == nil then
 			if targetVehicle ~= 0 then
-                local targetModelHash = GetEntityModel(targetVehicle)
-                -- Check to make sure the target vehicle is allowed to be towed (see settings at lines 8-12)
-                if not ((not allowTowingBoats and IsThisModelABoat(targetModelHash)) or (not allowTowingHelicopters and IsThisModelAHeli(targetModelHash)) or (not allowTowingPlanes and IsThisModelAPlane(targetModelHash)) or (not allowTowingTrains and IsThisModelATrain(targetModelHash)) or (not allowTowingTrailers and isTargetVehicleATrailer(targetModelHash))) then 
-                    if not IsPedInAnyVehicle(playerped, true) then
-                        if vehicle ~= targetVehicle and IsVehicleStopped(vehicle) then
-                            -- TriggerEvent('chatMessage', '', {255,255,255}, xoff .. ' ' .. yoff .. ' ' .. zoff) -- debug line
-                            AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0.0 + xoff, -1.5 + yoff, 0.0 + zoff, 0, 0, 0, 1, 1, 0, 1, 0, 1)
-                            currentlyTowedVehicle = targetVehicle
-                            ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been loaded onto the flatbed.")
+                local targetVehicleLocation = GetEntityCoords(targetVehicle, true)
+                local towTruckVehicleLocation = GetEntityCoords(vehicle, true)
+                local distanceBetweenVehicles = GetDistanceBetweenCoords(targetVehicleLocation, towTruckVehicleLocation, false)
+                -- print(tostring(distanceBetweenVehicles)) -- debug only
+                if distanceBetweenVehicles > 12.0 then
+                    ShowNotification("~o~~h~Tow Service:~n~~s~Your cables can't reach this far, move you truck closer to the vehicle.")
+                else
+                    local targetModelHash = GetEntityModel(targetVehicle)
+                    -- Check to make sure the target vehicle is allowed to be towed (see settings at lines 8-12)
+                    if not ((not allowTowingBoats and IsThisModelABoat(targetModelHash)) or (not allowTowingHelicopters and IsThisModelAHeli(targetModelHash)) or (not allowTowingPlanes and IsThisModelAPlane(targetModelHash)) or (not allowTowingTrains and IsThisModelATrain(targetModelHash)) or (not allowTowingTrailers and isTargetVehicleATrailer(targetModelHash))) then 
+                        if not IsPedInAnyVehicle(playerped, true) then
+                            if vehicle ~= targetVehicle and IsVehicleStopped(vehicle) then
+                                -- TriggerEvent('chatMessage', '', {255,255,255}, xoff .. ' ' .. yoff .. ' ' .. zoff) -- debug line
+                                AttachEntityToEntity(targetVehicle, vehicle, GetEntityBoneIndexByName(vehicle, 'bodyshell'), 0.0 + xoff, -1.5 + yoff, 0.0 + zoff, 0, 0, 0, 1, 1, 0, 1, 0, 1)
+                                currentlyTowedVehicle = targetVehicle
+                                ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been loaded onto the flatbed.")
+                            else
+                                ShowNotification("~o~~h~Tow Service:~n~~s~There is currently no vehicle on the flatbed.")
+                            end
                         else
-                            ShowNotification("~o~~h~Tow Service:~n~~s~There is currently no vehicle on the flatbed.")
+                            ShowNotification("~o~~h~Tow Service:~n~~s~You need to be outside of your vehicle to load or unload vehicles.")
                         end
                     else
-                        ShowNotification("~o~~h~Tow Service:~n~~s~You need to be outside of your vehicle to load or unload vehicles.")
+                        ShowNotification("~o~~h~Tow Service:~n~~s~Your towtruck is not equipped to tow this vehicle.")
                     end
-                else
-                    ShowNotification("~o~~h~Tow Service:~n~~s~Your towtruck is not equipped to tow this vehicle.")
                 end
             else
                 ShowNotification("~o~~h~Tow Service:~n~~s~No towable vehicle detected.")
