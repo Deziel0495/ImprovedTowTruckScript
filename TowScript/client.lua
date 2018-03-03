@@ -5,8 +5,8 @@
 -- x = left/right, y = forwards/backwards, z = up/down
 local allowedTowModels = { 
     ['flatbed'] = {x = 0.0, y = -0.85, z = 1.25}, -- default GTA V flatbed
-    ['flatbed2'] = {x = 0.0, y = 0.0, z = 0.68}, -- addon flatbed2 (provided with the script)
-    ['flatbed3'] = {x = 0.0, y = -1.2, z = 1.30}, -- addon flatbed3 (also provided with the script)
+    ['flatbed2'] = {x = 0.0, y = 0.0, z = 0.68}, -- addon flatbed2
+    ['flatbed3'] = {x = 0.0, y = -1.2, z = 1.30}, -- addon flatbed3
 }
 
 
@@ -85,6 +85,7 @@ AddEventHandler('tow', function()
                 local towTruckVehicleLocation = GetEntityCoords(vehicle, true)
                 local distanceBetweenVehicles = GetDistanceBetweenCoords(targetVehicleLocation, towTruckVehicleLocation, false)
                 -- print(tostring(distanceBetweenVehicles)) -- debug only
+		-- Distance allowed (in meters) between tow truck and the vehicle to be towed			
                 if distanceBetweenVehicles > 12.0 then
                     ShowNotification("~o~~h~Tow Service:~n~~s~Your cables can't reach this far, move you truck closer to the vehicle.")
                 else
