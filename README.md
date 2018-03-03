@@ -12,9 +12,9 @@ Script is designed to work with the regular GTA V FLATBED model, as well as with
 - No more "jello" vehicles that stretch and warp when being towed.
 - Can no longer detach a vehicle while the truck is moving or attach vehicles while they are moving.
 - Vehicles will detach if the truck flips over.
-- The vehicle that you want to tow, needs to be within 12m of your towtruck before you can start towing.
-- Large vehicles cannot be towed (configurable in the `client.lua` file)
-- You can have multiple towtrucks registered and have custom x,y,z offsets for the attatched vehicle.
+- The vehicle that you want to tow needs to be within 12m of your towtruck. (configurable in the `client.lua` file)
+- Large vehicles cannot be towed. (configurable in the `client.lua` file)
+- You can have multiple towtrucks registered and have custom x,y,z offsets. (configurable in the `client.lua` file)
 
 ## How it works:
 - Using a trainer spawn `flatbed`, `flatbed2` or `flatbed3` and get in.
