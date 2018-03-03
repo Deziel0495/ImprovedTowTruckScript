@@ -14,7 +14,7 @@ local allowTowingBoats = false -- Set to true if you want to be able to tow boat
 local allowTowingPlanes = false -- Set to true if you want to be able to tow planes.
 local allowTowingHelicopters = false -- Set to true if you want to be able to tow helicopters.
 local allowTowingTrains = false -- Set to true if you want to be able to tow trains.
-local allowTowingTrailers = true -- Disables trailers. NOTE: THIS ALSO DISABLES: AIRTUG, TOWTRUCK, SADLER, ANY OTHER VEHICLE THAT IS IN THE UTILITY CLASS.
+local allowTowingTrailers = true -- Disables trailers. NOTE: THIS ALSO DISABLES THE AIRTUG, TOWTRUCK, SADLER, AND ANY OTHER VEHICLE THAT IS IN THE UTILITY CLASS.
 
 local currentlyTowedVehicle = nil
 
@@ -87,7 +87,7 @@ AddEventHandler('tow', function()
                 -- print(tostring(distanceBetweenVehicles)) -- debug only
 		-- Distance allowed (in meters) between tow truck and the vehicle to be towed			
                 if distanceBetweenVehicles > 12.0 then
-                    ShowNotification("~o~~h~Tow Service:~n~~s~Your cables can't reach this far, move you truck closer to the vehicle.")
+                    ShowNotification("~o~~h~Tow Service:~n~~s~Your cables can't reach this far. Move your tow truck closer to the vehicle.")
                 else
                     local targetModelHash = GetEntityModel(targetVehicle)
                     -- Check to make sure the target vehicle is allowed to be towed (see settings at lines 8-12)
@@ -105,7 +105,7 @@ AddEventHandler('tow', function()
                             ShowNotification("~o~~h~Tow Service:~n~~s~You need to be outside of your vehicle to load or unload vehicles.")
                         end
                     else
-                        ShowNotification("~o~~h~Tow Service:~n~~s~Your towtruck is not equipped to tow this vehicle.")
+                        ShowNotification("~o~~h~Tow Service:~n~~s~Your tow truck is not equipped to tow this vehicle.")
                     end
                 end
             else
@@ -120,7 +120,7 @@ AddEventHandler('tow', function()
 			ShowNotification("~o~~h~Tow Service:~n~~s~Vehicle has been unloaded from the flatbed.")
 		end
 	else
-        ShowNotification("~o~~h~Tow Service:~n~~s~Your vehicle is not registered as an official ~o~Tow Service ~s~tow truck.")
+        ShowNotification("~o~~h~Tow Service:~n~~s~Your vehicle is not registered as an official tow truck.")
     end
 end)
 
