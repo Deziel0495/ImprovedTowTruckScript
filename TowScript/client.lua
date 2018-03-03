@@ -14,7 +14,7 @@ local allowTowingBoats = false -- Set to true if you want to be able to tow boat
 local allowTowingPlanes = false -- Set to true if you want to be able to tow planes.
 local allowTowingHelicopters = false -- Set to true if you want to be able to tow helicopters.
 local allowTowingTrains = false -- Set to true if you want to be able to tow trains.
-local allowTowingTrailers = false -- Disables trailers. NOTE: THIS ALSO DISABLES: AIRTUG, TOWTRUCK, SADLER, ANY OTHER VEHICLE THAT IS IN THE UTILITY CLASS.
+local allowTowingTrailers = true -- Disables trailers. NOTE: THIS ALSO DISABLES: AIRTUG, TOWTRUCK, SADLER, ANY OTHER VEHICLE THAT IS IN THE UTILITY CLASS.
 
 local currentlyTowedVehicle = nil
 
