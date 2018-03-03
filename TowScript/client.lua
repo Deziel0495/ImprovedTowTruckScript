@@ -1,7 +1,7 @@
 -- Created by Asser90 - modified by Deziel0495 and IllusiveTea - further modified by Vespura --
 
 -- These vehicles will be registered as "allowed/valid" tow trucks.
--- Change the x, y and z offset values for the towed vehicles to be attached to the towtruck.
+-- Change the x, y and z offset values for the towed vehicles to be attached to the tow truck.
 -- x = left/right, y = forwards/backwards, z = up/down
 local allowedTowModels = { 
     ['flatbed'] = {x = 0.0, y = -0.85, z = 1.25}, -- default GTA V flatbed
