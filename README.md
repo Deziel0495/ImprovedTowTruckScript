@@ -1,4 +1,4 @@
-# Just Another Tow Script
+# Improved Tow Truck Script
 A modified version of Asser90's tow script with multiple fixes and improvements.
 
 ## Important Note:
