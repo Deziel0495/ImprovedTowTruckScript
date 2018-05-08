@@ -27,5 +27,3 @@ Script is designed to work with the regular GTA V FLATBED model, as well as with
 - If another player is close to you when the command is entered the vehicle may not attach/detach. **Ask them to step away.** 
 The cause of this has been identified as the raycast is detecting the other player instead of the vehicle.
 - Having another player (passenger) in the flatbed with you is known to cause issues with attaching/detaching vehicles. You may want to RP that it is against company policy to have passengers. Use your imagination for now. :)
-
-#### Join my Discord: http://discord.me/deziel
