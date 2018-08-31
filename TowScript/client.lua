@@ -1,5 +1,10 @@
 -- Created by Asser90 - modified by Deziel0495 and IllusiveTea - further modified by Vespura --
 
+-- NOTICE
+-- This script is licensed under "No License". https://choosealicense.com/no-license/
+-- You are allowed to: Download, Use and Edit the Script. 
+-- You are not allowed to: Copy, re-release, re-distribute it without our written permission.
+
 -- These vehicles will be registered as "allowed/valid" tow trucks.
 -- Change the x, y and z offset values for the towed vehicles to be attached to the tow truck.
 -- x = left/right, y = forwards/backwards, z = up/down
