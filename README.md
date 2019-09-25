@@ -1,4 +1,7 @@
 # Improved Tow Truck Script
+
+### NOTICE: This script is no longer supported, no further updates will be released.
+
 A modified version of Asser90's tow script with multiple fixes and improvements.
 
 ## Important Note:
